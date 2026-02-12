@@ -13,9 +13,7 @@ description: строка (макс. 255 символов)
 
 from sqlalchemy import create_engine, SmallInteger, String, Numeric,Boolean, ForeignKey
 from sqlalchemy.orm import sessionmaker, DeclarativeBase, Mapped, mapped_column, relationship
-from pathlib import Path
 
-BASE_DIR = Path(__file__).absolute().parent
 engine = create_engine(url="sqlite:///:memory:", echo=True)
 
 class Base(DeclarativeBase):
