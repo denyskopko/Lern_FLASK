@@ -17,7 +17,7 @@ from sqlalchemy.orm import sessionmaker, DeclarativeBase, Mapped, mapped_column,
 engine = create_engine(url="sqlite:///:memory:", echo=True)
 
 class Base(DeclarativeBase):
-    ...
+    __abstract__ = True
 
 class Product(Base):
     __tablename__ = "products"
